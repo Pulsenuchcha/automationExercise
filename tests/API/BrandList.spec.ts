@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import * as data from "../../Utils/data.json";
 
 test.describe("Positive API Tests", () => {
-  test('Get All Brands List API Should Return Valid Data', async ({
+  test('Get All Brands List API Should Return 200 and Valid Data', async ({
     request,
   }) => {
     const response = await request.get(`${data.baseUrl}/api/brandsList`);
@@ -11,7 +11,7 @@ test.describe("Positive API Tests", () => {
     expect(responseBody).toBeTruthy();
   });
 
-  test('GET /BrandsList Should Return at Least One Brand', async ({
+  test('GET BrandsList Should Return at Least One Brand', async ({
     request,
   }) => {
     const response = await request.get(`${data.baseUrl}/api/brandsList`);
@@ -24,7 +24,7 @@ test.describe("Positive API Tests", () => {
 });
 
 test.describe("Negative API Tests", () => {
-  test('PUT to /brandsList should not be allowed', async ({ request }) => {
+  test('PUT to brandsList Should Not Be Allowed', async ({ request }) => {
     const response = await request.put(`${data.baseUrl}/api/brandsList`, {
       data: { brand: "Pulso" }
     });

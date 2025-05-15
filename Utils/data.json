@@ -1,3 +1,15 @@
 {
-    "baseUrl" : "https://automationexercise.com"
+  "baseUrl": "https://automationexercise.com",
+
+  "login": {
+    "email": "testnaja234@example.com",
+    "password": "Test123"
+  },
+  "invalidLogin": {
+    "email": "testnaja@example.com",
+    "password": "Test"
+  },
+  "loginWithoutEmail": {
+    "password": "Test"
+  }
 }

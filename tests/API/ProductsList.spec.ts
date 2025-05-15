@@ -2,7 +2,7 @@ import { test, expect} from "@playwright/test";
 import * as data from "../../Utils/data.json";
 
 test.describe("Positive API Tests", () => {
-  test("Get All Product List should return status 200 and a valid response", async ({
+  test("Get All Product List Should Return Status 200 and a Valid response", async ({
     request,
   }) => {
     const response = await request.get(`${data.baseUrl}/api/productsList`);
@@ -12,7 +12,7 @@ test.describe("Positive API Tests", () => {
     console.log(responseBody);
   });
 
-  test("Count how many Polo Brand on Products Exist", async ({ request }) => {
+  test("Count How Many Polo Brand on Products Exist", async ({ request }) => {
     const response = await request.get(`${data.baseUrl}/api/productsList`);
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
@@ -26,7 +26,7 @@ test.describe("Positive API Tests", () => {
 });
 
 test.describe("Negative API Test", () => {
-  test("POST to /productsList should not be allowed", async ({ request }) => {
+  test("POST to ProductsList Should Not Be Allowed", async ({ request }) => {
     const response = await request.post(`${data.baseUrl}/api/productsList`, {
       data: { brand: "Test Post Method" },
     });
