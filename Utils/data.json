@@ -11,5 +11,9 @@
   },
   "loginWithoutEmail": {
     "password": "Test"
+  },
+  "deleteAccount": {
+     "email": "Pulso@example.com",
+    "password": "TestPassword123!"
   }
 }
