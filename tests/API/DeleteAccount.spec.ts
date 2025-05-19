@@ -11,7 +11,7 @@ test('DELETE METHOD To Delete User Account', async ({
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
           }
-    });3
+    });
     console.log(data.deleteAccount);
     const responseBody = await response.json();
     console.log("responseBody: ", responseBody);
@@ -19,6 +19,4 @@ test('DELETE METHOD To Delete User Account', async ({
     expect(responseBody).toBeTruthy();
     expect(responseBody.responseCode).toBe(200);
     expect(responseBody.message).toBe("Account deleted!");
-
-    
   });

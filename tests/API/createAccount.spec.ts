@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import * as data from "../../Utils/data.json";
-import { log } from "console";
+
 
 test("POST To Create/Register User Account", async ({ request }) => {
   const response = await request.post(`${data.baseUrl}/api/createAccount`, {
